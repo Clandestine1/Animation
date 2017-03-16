@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link href="https://fonts.googleapis.com/css?family=Handlee" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="index.css">
+
+	<title>Shauna's Flower Power</title>
+</head>
+<body>
+<div id="whole">
+<div class="all"></div>
+
+<div id="one"><span style="opacity: 0;">.</span></div>
+
+<div class="slideshow-container">
+
+<div class="my">
+  <img src="sone.jpg" style=" height:480px ; width:350px" >
+</div>
+
+<div class="my">
+  <img src="stwo.jpg" style="height:480px ; width:350px">
+</div>
+
+<div class="my">
+  <img src="sthree.jpg" style="height:480px ; width:350px">
+</div>
+
+<div class="my">
+  <img src="sfour.jpg" style="height:480px ; width:350px">
+</div>
+
+<div class="my">
+  <img src="sfive.jpg" style="height:480px ; width:350px">
+</div>
+
+<div class="my">
+  <img src="ssix.jpg" style="height:480px ; width:350px">
+</div>
+
+<div class="my">
+  <img src="sseven.jpg" style="height:480px ; width:350px">
+</div>
+
+<div class="my">
+  <img src="seight.jpg" style="height:480px ; width:350px">
+</div>
+</div>
+
+	<img id="cherry" src="la.png">
+
+
+	<img id="opp" src="m.png">
+
+	<div id="pink" class="video"><video width="320" height="240" controls autoplay muted="">
+  <source src="seventeen.mp4" type="video/mp4">
+ </video></div>
+
+<div id="white" class="video"><video width="320" height="240" controls autoplay muted="">
+  <source src="eighteen.mp4" type="video/mp4">
+</video></div>
+
+<div id='flexbutton'>
+<button style="font-family: 'Handlee', cursive;font-weight: bolder;font-size: 24px;border: none; background-color: pink; z-index: 9; border-radius: 4px" onclick="Move(),Mover()"> ~Clandestine Button~ </button>
+</div>
+
+
+
+<script type="text/javascript">
+
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+    var i;
+    var slides = document.getElementsByClassName("my");
+    for (i = 0; i < slides.length; i++) {
+       slides[i].style.display = "none";  
+    }
+    slideIndex++;
+    if (slideIndex> slides.length) {slideIndex = 1}    
+  
+    slides[slideIndex-1].style.display = "block";  
+
+    setTimeout(showSlides, 2000);
+}
+
+
+function Move() {
+	var element = document.getElementById("cherry");
+	var position = 0;
+	var id = setInterval(frame, 1);
+
+	function frame() {
+		if (position == 2350) {
+			clearInterval(id);
+		} 
+		else {
+	position++;
+	element.style.right = position + 'px';
+	element.style.left = position + 'px';
+	
+	}
+}
+}
+
+
+function Mover() {
+	var element = document.getElementById("opp");
+	var position = 0;
+	var id = setInterval(frame2, 1);
+
+	function frame2() {
+		if (position == 2350) {
+			clearInterval(id)
+;		} else {
+	position++;
+	element.style.bottom = position + 'px';
+	element.style.top = position + 'px';
+	
+	}
+}
+}
+
+
+
+</script>
+
+
+
+</body>
+<audio src="Numa.mp3" type="audio/mpeg" autoplay></audio>
+</html>
